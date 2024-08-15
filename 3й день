@@ -1,0 +1,51 @@
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_terms
+WHERE country_name = "Ukraine"
+AND refresh_date = "2024-08-13"
+AND region_name = "Cherkas'ka oblast"
+AND week = "2024-08-11"
+AND rank = 1
+LIMIT 100;
+
+-- працюємо з пошуком слів
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_terms
+WHERE country_name = "Ukraine"
+AND refresh_date = "2024-08-13"
+AND region_name = "Cherkas'ka oblast"
+AND week = "2024-08-11"
+AND rank = 1
+LIMIT 100;
+
+--
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_terms
+WHERE country_name = "Ukraine"
+AND refresh_date = "2024-08-13"
+AND region_name LIKE "C%"
+AND week = "2024-08-11"
+LIMIT 100;
+
+--
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_terms
+WHERE country_name = "Ukraine"
+AND refresh_date = "2024-08-13"
+AND term LIKE '%футбол%'
+LIMIT 100;
+
+-- 
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_terms
+WHERE country_name = "Ukraine"
+AND refresh_date = "2024-08-13"
+AND term LIKE 'С%'
+LIMIT 100;
+
+--
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_terms
+WHERE country_name LIKE "Ukr%"
+AND refresh_date = "2024-08-13"
+AND term LIKE '%2024%'
+LIMIT 100;
